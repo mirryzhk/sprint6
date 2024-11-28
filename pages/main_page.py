@@ -1,9 +1,13 @@
 from pages.base_page import BasePage
 from locators.main_page_locators import MainPageLocators
 import allure
-
+import data
 
 class MainPage(BasePage):
+
+    @allure.step('Принятие кук')
+    def accept_cookies(self):
+        super().accept_cookies(MainPageLocators.ACCEPT_COOKIE_BUTTON)
 
     @allure.step('Получение текста ответа на вопрос')
     def get_answer_text(self, num):

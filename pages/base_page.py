@@ -48,3 +48,8 @@ class BasePage:
     def switch_to_next_tab(self, url):
         self.driver.switch_to.window(self.driver.window_handles[-1])
         WebDriverWait(self.driver, 5).until(EC.url_to_be(url))
+
+
+    @allure.step('Проверка соответствия текущего URL ожидаемому')
+    def check_url(self, expected_url):
+        return self.driver.current_url == expected_url

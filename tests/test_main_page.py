@@ -1,9 +1,7 @@
 import data
 import allure
 import pytest
-
 from pages.main_page import MainPage
-from locators.main_page_locators import (MainPageLocators)
 
 
 class TestMainPage:
@@ -26,5 +24,5 @@ class TestMainPage:
     def test_questions_and_answers(self, driver, num, result):
         main_page = MainPage(driver)
         main_page.open_page(data.MAIN_PAGE_URL)
-        main_page.accept_cookies(MainPageLocators.ACCEPT_COOKIE_BUTTON)
+        main_page.accept_cookies()
         assert main_page.get_answer_text(num) == result

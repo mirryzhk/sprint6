@@ -31,3 +31,10 @@ class OrderPageLocators:
     # Логотипы на странице
     SCOOTER_LOGO = (By.XPATH, "//img[@alt='Scooter']")
     YANDEX_LOGO = (By.XPATH, "//img[@alt='Yandex']")
+
+    # Кнопки заказа
+    ORDER_TOP_BUTTON = (By.XPATH, "(//button[text()='Заказать'])[1]")
+    ORDER_BOTTOM_BUTTON = (By.XPATH, "(//button[text()='Заказать'])[2]")
+
+    # Принятие кук
+    ACCEPT_COOKIE_BUTTON = By.ID, 'rcc-confirm-button'
