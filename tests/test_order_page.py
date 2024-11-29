@@ -1,7 +1,6 @@
 import data
 import allure
 from pages.order_page import OrderPage
-from locators.order_page_locators import OrderPageLocators
 
 
 class TestOrderPage:
